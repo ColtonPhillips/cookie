@@ -31,20 +31,19 @@ func main() {
 	check(err)
 
 	// Run the precompiler immediately when the program starts
-	runPrecompiler()
+	runCompiler()
 
-	// Keep watching for file changes
 	for {
 		select {
 		case event := <-watcher.Events:
-			if event.Name == "main.igm" {
+			if event.Name == "main.igm" || event.Name == "cookie.go" {
 				continue
 			}
 
 			// If a file is modified, re-run the precompiler
 			if event.Op&fsnotify.Write == fsnotify.Write {
 				fmt.Println("Detected file change:", event.Name)
-				runPrecompiler()
+				runCompiler()
 			}
 		case err := <-watcher.Errors:
 			fmt.Println("Watcher error:", err)
@@ -52,8 +51,8 @@ func main() {
 	}
 }
 
-// runPrecompiler runs the precompiler logic
-func runPrecompiler() {
+// runCompiler runs the precompiler logic
+func runCompiler() {
 	cookieFiles := []string{}
 	fileContents := map[string]string{}
 	variables := map[string]string{}
@@ -103,6 +102,7 @@ func runPrecompiler() {
 
 	// Compile the main file using loaded variables and file contents
 	compiled, err := compileMain(mainFile, variables, fileContents)
+	compiled = string("// ExPoRtEd fIle - millenial pause\n//------------------\n\n\n\n\n") + compiled
 	check(err)
 	check(os.WriteFile("build/main.igm", []byte(compiled), 0644))
 	fmt.Println("Compiled main.igm successfully!")

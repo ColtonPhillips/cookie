@@ -1,14 +1,10 @@
 Let's make a game!
-	name:<$author_name>'s Game "<$game_name>" with slight change
+	name:<$author_name>'s Game "<$game_name>"
 	author:<$author_name>
 	desc: <$game_description> Join the discord! : <$discord_url>
-	// created:01/02/2025
-	// updated:24/03/2025
-	// version:pre-release0.1
 
 Settings
 <$settings>
-
 
 Layout
 <$layout>
@@ -27,7 +23,6 @@ Buildings
 
 Upgrades
 <$upgrades>
-
 
 Achievements
 <$achievements>

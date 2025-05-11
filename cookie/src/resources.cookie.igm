@@ -1,10 +1,10 @@
 resources = [[[
-	*bacteria
-		name:Test
-		desc:The basic unit. Infect living creatures with it. <$author_name> made it!
+	*cash
+		name:CASH
+		desc:Cold Hard Cash (Canadian Pennies)
 		show earned
 		class:noBackground
-		icon:https://i.imgur.com/0NuUxM4.png
+		icon:<$ICoin>
 
 	*string
 		name:String

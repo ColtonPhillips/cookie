@@ -2,6 +2,7 @@ layout = [[[
 	*main
 		contains:tag:resource, buttons
 	*resource
+		header:<t>Resources</t>
 		contains:Resources
 	*buttons
 		contains:Buttons
@@ -9,15 +10,15 @@ layout = [[[
 	*store
 		contains:buildings, upgrades
 	*upgrades
-		header:<t>UPGRADES</t>
+		header:<t>Upgrades</t>
 		contains:tag:UpgrButtons, Upgrades
 		names:hide
 		costs:hide
 	*buildings
 		contains:BulkDisplay, Buildings
-		header:<t>BUILDINGS</t>
+		header:<t>Stuff</t>
 	*achievements
 		contains:Achievements
-		header:<t>ACHIEVEMENTS</t>
+		header:<t>Cheevos</t>
 		names:hide
 ]]]

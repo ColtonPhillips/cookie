@@ -1,5 +1,5 @@
 settings = [[[
-	background:<$background_url>
+	background:<$IBGURL>
 	building cost increase:100%
 	building cost refund:0%
 	spritesheet:upgricons, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/upgradesIcon
