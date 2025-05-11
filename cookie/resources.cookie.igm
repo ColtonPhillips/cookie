@@ -1,0 +1,28 @@
+resources = [[[
+	*bacteria
+		name:Bacteria
+		desc:The basic unit. Infect living creatures with it.
+		show earned
+		class:noBackground
+		icon:https://i.imgur.com/0NuUxM4.png
+
+	*string
+		name:String
+		desc:A ressource produced by ant. Can be used to make bacterial colonies that produce more bacteria or sold for money.
+		show earned
+		hidden when 0
+		class:noBackground
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/stringIcon?v=1741654746610
+
+	*money
+		name:Money
+		desc:Can be used to buy special upgrades, buy more powerful bacterial colonies and enslave humans.
+		show earned
+		hidden when 0
+		class:noBackground
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/moneyIcon?v=1741656370853
+
+	*var1
+		name:var1
+		always hidden
+]]]

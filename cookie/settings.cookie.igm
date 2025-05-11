@@ -1,0 +1,8 @@
+settings = [[[
+	background:<$background_url>
+	building cost increase:100%
+	building cost refund:0%
+	spritesheet:upgricons, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/upgradesIcon
+	spritesheet:achicons1, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/resAchIcon
+	spritesheet:achicons2, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/builAchIcon
+]]]

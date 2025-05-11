@@ -98,7 +98,6 @@ CSS
     }
 
 Buttons
-
 	*make.bacteria
 		name:Dig for a Coin in the dirt
 		desc:Modify a cell to make it into a bacteria. Grants 0.1 bacteria per click.
@@ -133,9 +132,7 @@ Buttons
 		on click:show :Upgrades:notOwned
 		on click:hide :Upgrades:owned
 
-
 Resources
-
 	*bacteria
 		name:Bacteria
 		desc:The basic unit. Infect living creatures with it.
@@ -162,8 +159,8 @@ Resources
 	*var1
 		name:var1
 		always hidden
-Buildings
 
+Buildings
     	*test
 		name:A big Burger from Colton Phillips
 		desc:Study the bacteria to be more efficient in their creation. Gives +0.1 bacteria per click.
@@ -257,7 +254,6 @@ Buildings
 		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/bombIcon
 
 Upgrades
-
 	*TEMPLATE
 		on earn:hide this
 
@@ -744,6 +740,7 @@ Upgrades
 		cost:1e15 money
 		req:(salesman>=8e9)
 		icon:upgricons[0,0]
+
 
 Achievements
 	*bacteriaach1

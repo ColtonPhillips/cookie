@@ -1,0 +1,35 @@
+buttons = [[[
+	*make.bacteria
+		name:Dig for a Coin in the dirt
+		desc:Modify a cell to make it into a bacteria. Grants 0.1 bacteria per click.
+		on click:yield 0.1 bacteria
+		on click:anim icon wobble
+		icon:https://i.imgur.com/01F5NDL.png
+		class:bigButton hasFlares
+		tag:MainButton
+
+	*sell.string
+		name:Sell string
+		desc:Sell some string on the black market. (1 string = 0.1 money)
+		on click:if (string>1) yield 0.1 money
+		on click:if (string>1) yield -1 string
+		on tick:if (ant>=1) show this
+		on tick:if (ant<1) hide this
+		icon:https://s.cafebazaar.ir/images/icons/com.Infinity.money-20025ed1-3e7c-4fbc-8e20-443e6f25c30d_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize
+		tooltip origin:bottom
+		tag:SecButton
+
+	*bought
+		tag:UpgrButtons
+		class:upgradeSwitch
+		name:See Owned Upgrades
+		on click:show :Upgrades:owned
+		on click:hide :Upgrades:notOwned
+
+	*not.bought
+		tag:UpgrButtons
+		class:upgradeSwitch
+		name:Buy Upgrades
+		on click:show :Upgrades:notOwned
+		on click:hide :Upgrades:owned
+]]]
