@@ -16,27 +16,7 @@ Settings
 
 
 Layout
-	*main
-		contains:tag:resource, buttons
-	*resource
-		contains:Resources
-	*buttons
-		contains:Buttons
-		names:hide
-	*store
-		contains:buildings, upgrades
-	*upgrades
-		header:<t>UPGRADES</t>
-		contains:tag:UpgrButtons, Upgrades
-		names:hide
-		costs:hide
-	*buildings
-		contains:BulkDisplay, Buildings
-		header:<t>BUILDINGS</t>
-	*achievements
-		contains:Achievements
-		header:<t>ACHIEVEMENTS</t>
-		names:hide
+<$layout>
 
 CSS
 <$example.css>
