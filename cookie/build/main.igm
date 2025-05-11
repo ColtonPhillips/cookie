@@ -39,6 +39,7 @@ Layout
 		names:hide
 
 CSS
+/* Colton was here */
 #game.on
 {
     background-size: cover;
@@ -164,7 +165,7 @@ Resources
 Buildings
 
     	*test
-		name:Juicy oner
+		name:A big Burger from Colton Phillips
 		desc:Study the bacteria to be more efficient in their creation. Gives +0.1 bacteria per click.
 		cost:10 bacteria
 		passive:increase bacteria yield of make.bacteria by 0.1
