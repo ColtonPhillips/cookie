@@ -1,0 +1,93 @@
+buildings = [[[
+    	*test
+		name:Juicy oner
+		desc:Study the bacteria to be more efficient in their creation. Gives +0.1 bacteria per click.
+		cost:10 bacteria
+		passive:increase bacteria yield of make.bacteria by 0.1
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/testIcon
+
+	*ant
+		name:Ant
+		desc:An infected ant that will produce special string at the rate of 0.01g/s
+		cost:10e6 bacteria
+		on tick:yield 0.01 string
+		req:1e6 bacteria:earned
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/antIcon
+
+	*queen
+		name:Queen
+		desc:An infected ant queen that will produce ants at the rate of 1 ant per 10 seconds
+		cost:50e9 bacteria
+		on tick:yield 0.1 ant
+		req:ant>=1e3
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/queenIcon
+
+	*whale
+		name:Whale
+		desc:A whale infected by ants that will produce ant queens at the rate of 1 ant queen per second.
+		cost:250e15 bacteria
+		on tick:yield 1 queen
+		req:queen>2e3 and 50e15 bacteria:earned
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/whaleIcon
+
+	*string.colony
+		name:String colony
+		desc:A piece of string in which bacteria can reproduce. Makes 10 000 bacterias per second.
+		cost:1e6 bacteria, 1 string
+		on tick:yield 10e3 bacteria
+		req:colonyupgr0
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/colonyIcon
+
+	*incubator
+		name:Incubator
+		desc:A fancy machine that recreates the perfect condition for your bacterias to grow in. Makes about 10 million bacterias per second
+		cost:10e3 money
+		on tick:yield 10e6 bacteria
+		req:(string.colony>=1e3)
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/incubatorIcon
+
+	*farm
+		name:Bacteria Farm
+		desc:A laboratory located in the city's sewers filled with fancy machines entirely dedicated to bacteria production. Makes about 125 billion bacterias per second.
+		cost:100e6 money
+		on tick:yield 125e9 bacteria
+		req:25e6 money:earned and incubator>=20e3
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/farmIcon
+
+	*complex
+		name:Bacteria Complex
+		desc:A giant complex filled with buildings in string concrete swarming with bacterias. Makes about 100 quadrillion bacterias per second.
+		cost:10e12 money, 25e12 string
+		on tick:yield 100e15 bacteria
+		on tick:yield 0.01 money
+		req:complexupgr0
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/complexIcon
+
+	*salesman
+		name:Salesman
+		desc:A minion who will go sell ant string on the dark market for 0.1$/g. He can sell 1g of string per second.
+		cost:100 money
+		on tick:if (string>1) yield 0.1 money
+		on tick:if (string>1) yield -1 string
+		req:100 money:earned and 100 string:earned and salesmanupgr0
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/salesmanIcon
+
+	*factory
+		name:Factory
+		desc:A secret place with machines who capture people and turn them into zombie-salesmen with bacterias. It takes about 30 trillion bacterias to infect a human and a factory infects about 1 human a second.
+		cost:1e6 money, 1 salesman
+		on tick:if (bacteria>30e12*factory) yield 1 salesman
+		on tick:if (bacteria>30e12*factory) yield -30e12 bacteria
+		req:5e12 bacteria:earned
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/factoryIcon
+		
+	*bomber
+		name:Bomber
+		desc:A plane filled with biological weapons able to contaminate entire neighbourhoods at a time. It takes about 5 billion dollars and 1 quintillion bacterias to make a bomb and a bomb infects about 10 thousand humans. A bomber throws 1 bomb by second.
+		cost:1e9 money, 4 salesman
+		on tick:if (bacteria>1e18 and money>5e9) yield 10e3 salesman
+		on tick:if (bacteria>1e18 and money>5e9) yield -5e9 money
+		on tick:if (bacteria>1e18 and money>5e9) yield -1e18 bacteria
+		req:bombupgr0
+		icon:https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/bombIcon
+]]]

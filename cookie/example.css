@@ -1,0 +1,56 @@
+#game.on
+{
+    background-size: cover;
+    image-rendering: pixelated
+    
+}
+.thing-icon {
+                background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.thing
+    {
+         border-radius:4px;
+         background:rgba(255,255,255,0.5);
+
+      }
+.box-header
+    {
+        border-radius:12px;
+    }
+#box-resource
+    {
+        position: fixed;
+         top:5%;
+          left:0px;
+        width:60%;
+        height:48px;
+        color:rgba(255,255,255,1);
+        background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%);
+    }
+#box-buildings
+    {
+        position: fixed;
+         top:0%;
+          right:0px;
+        width:39%;
+        height:40%
+    }	
+#box-upgrades
+    {
+        position: fixed;
+         top:40%;
+          right:0px;
+        width:39%;
+        height:39%;
+    }
+#box-achievements
+    {
+        position: fixed;
+        top:80%;
+        left:0px;
+        width:100%;
+        min-height:20%;
+        background:rgba(90,60,0,1);
+    }
