@@ -1,6 +1,6 @@
 resources = [[[
 	*bacteria
-		name:Bacteria
+		name:<$author_name>'s Sweet Coinage
 		desc:The basic unit. Infect living creatures with it.
 		show earned
 		class:noBackground
