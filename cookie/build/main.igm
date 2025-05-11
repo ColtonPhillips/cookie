@@ -134,8 +134,8 @@ Buttons
 
 Resources
 	*bacteria
-		name:Colton Phillips's Sweet Coinage
-		desc:The basic unit. Infect living creatures with it.
+		name:Coin
+		desc:The basic unit. Infect living creatures with it. Colton Phillips made it!
 		show earned
 		class:noBackground
 		icon:https://i.imgur.com/0NuUxM4.png
