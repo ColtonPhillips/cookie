@@ -1,6 +1,6 @@
 buttons = [[[
 	*make.bacteria
-		name:Dig for a Coin in the dirt
+		name:Dig for a Coin in the dirt for <$author_name>
 		desc:Modify a cell to make it into a bacteria. Grants 0.1 bacteria per click.
 		on click:yield 0.1 bacteria
 		on click:anim icon wobble

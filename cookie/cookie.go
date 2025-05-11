@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io/fs"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -25,6 +26,8 @@ func main() {
 
 	// Watch the current directory for file changes
 	err = watcher.Add(".")
+	check(err)
+	err = watcher.Add("src")
 	check(err)
 
 	// Run the precompiler immediately when the program starts
@@ -57,10 +60,17 @@ func runPrecompiler() {
 	var mainFile string
 
 	// Walk through the current directory to find relevant files
-	err := filepath.Walk(".", func(path string, info os.FileInfo, err error) error {
-		if err != nil || info.IsDir() {
+	err := filepath.WalkDir(".", func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			fmt.Printf("Error walking path: %s\n", path)
 			return err
 		}
+
+		// If it's a directory, continue walking, if it's a file, process it
+		if d.IsDir() {
+			return nil
+		}
+
 		base := filepath.Base(path)
 		if strings.Contains(base, ".cookie.") {
 			cookieFiles = append(cookieFiles, path)
