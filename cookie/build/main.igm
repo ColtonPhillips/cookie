@@ -134,7 +134,7 @@ Buttons
 
 Resources
 	*bacteria
-		name:Coin Colton Phillips
+		name:Test
 		desc:The basic unit. Infect living creatures with it. Colton Phillips made it!
 		show earned
 		class:noBackground
