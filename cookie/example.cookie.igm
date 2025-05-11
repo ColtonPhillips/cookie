@@ -1,5 +1,5 @@
 Let's make a game!
-	name:<$author_name>'s Game "<$game_name>"
+	name:<$author_name>'s Game "<$game_name>" with slight change
 	author:<$author_name>
 	desc: <$game_description> Join the discord! : <$discord_url>
 	// created:01/02/2025
