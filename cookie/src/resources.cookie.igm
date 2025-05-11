@@ -1,6 +1,6 @@
 resources = [[[
 	*bacteria
-		name:Colton's Special Coin
+		name:Coin <$author_name>
 		desc:The basic unit. Infect living creatures with it. <$author_name> made it!
 		show earned
 		class:noBackground
