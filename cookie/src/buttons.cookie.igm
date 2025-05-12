@@ -5,7 +5,7 @@ buttons = [[[
 		desc:Dig in the dirt until you find something for <$author_name>
 		on click:yield 1 cash
 		on click:anim icon wobble
-		icon:https://i.imgur.com/01F5NDL.png
+		icon:<$IShovel>
 		class:bigButton
 		tag:MainButton
 

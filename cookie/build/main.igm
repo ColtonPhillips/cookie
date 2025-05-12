@@ -10,9 +10,9 @@ Let's make a game!
 	desc: Welcome to my nightmare! #gamedev Join the discord! : http://www.example.com
 
 Settings
-	background:https://i.imgur.com/Y3IKNcv.png
+	background:https://i.imgur.com/d6uHzC8.png
 	building cost increase:100%
-	building cost refund:0%
+	building cost refund:1%
 	spritesheet:upgricons, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/upgradesIcon
 	spritesheet:achicons1, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/resAchIcon
 	spritesheet:achicons2, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/builAchIcon
@@ -43,62 +43,65 @@ Layout
 
 CSS
 /* Colton was here */
-#game.on
-{
-    background-size: cover;
-    image-rendering: pixelated
-    
+#game.on {
+  background-size: cover;
+  image-rendering: pixelated;
+  background-position: center;
 }
-.thing-icon {
-                background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-}
-.thing
-    {
-         border-radius:4px;
-         background:rgba(255,255,255,0.5);
 
-      }
-.box-header
-    {
-        border-radius:12px;
-    }
-#box-resource
-    {
-        position: fixed;
-         top:5%;
-          left:0px;
-        width:60%;
-        height:48px;
-        color:rgba(255,255,255,1);
-        background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%);
-    }
-#box-buildings
-    {
-        position: fixed;
-         top:0%;
-          right:0px;
-        width:39%;
-        height:40%
-    }	
-#box-upgrades
-    {
-        position: fixed;
-         top:40%;
-          right:0px;
-        width:39%;
-        height:39%;
-    }
-#box-achievements
-    {
-        position: fixed;
-        top:80%;
-        left:0px;
-        width:100%;
-        min-height:20%;
-        background:rgba(90,60,0,1);
-    }
+.thing-icon {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.thing {
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.box-header {
+  border-radius: 12px;
+}
+#box-resource {
+  position: fixed;
+  top: 5%;
+  left: 0px;
+  width: 60%;
+  height: 48px;
+  border-radius: 32px;
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#box-buildings {
+  position: fixed;
+  top: 0%;
+  right: 0px;
+  width: 39%;
+  height: 40%;
+  border-radius: 32px;
+}
+#box-upgrades {
+  position: fixed;
+  top: 40%;
+  right: 0px;
+  width: 39%;
+  border-radius: 32px;
+  height: 39%;
+}
+#box-achievements {
+  position: fixed;
+  top: 80%;
+  left: 0px;
+  width: 100%;
+  min-height: 20%;
+  border-radius: 32px;
+  background: rgb(96, 48, 75);
+}
+
 
 Buttons
 
@@ -107,7 +110,7 @@ Buttons
 		desc:Dig in the dirt until you find something for Colton Phillips
 		on click:yield 1 cash
 		on click:anim icon wobble
-		icon:https://i.imgur.com/01F5NDL.png
+		icon:https://i.imgur.com/FDEif4M.png
 		class:bigButton
 		tag:MainButton
 
@@ -144,6 +147,22 @@ Resources
 		class:noBackground
 		icon:https://i.imgur.com/01F5NDL.png
 
+	*darts
+		name:DARTS
+		desc:A cigarette that you can smoke
+		// show earned
+		class:noBackground
+		// on load:yield 1 darts
+		icon:https://i.imgur.com/V0czQ98.png
+
+	*toonies
+		name:TOONIES
+		desc:Toonies with some numismatic value
+		class:noBackground
+		icon:https://i.imgur.com/NdGwzWj.png
+		hidden when 0
+
+
 	*string
 		name:String
 		desc:A ressource produced by ant. Can be used to make bacterial colonies that produce more bacteria or sold for money.
@@ -170,7 +189,7 @@ Buildings
 		desc:Double meat and Double Cheese!
 		cost:500 cash
 		on click:cash is cash+1
-		icon:https://placecats.com/300/200
+		icon:https://i.imgur.com/fBOcVQg.png
 
 	*autodigger
 		name:autodigger
@@ -761,39 +780,69 @@ Achievements
 		req:(burgershop>=5)
 		icon:https://placecats.com/300/200
 
-	*diggerach
-		name:You can feel the dirt on your hands
-		desc:Your hands feel really nice, and you start to feel happy
-		on earn:yield 42 cash
-		req:24 cash:earned
-		icon:https://placecats.com/300/200
 
-	*diggerach1
-		name:You find a Canadian Toonie
-		desc:It's a common one, so you are totally okay to spend this on boygers
-		on earn:yield 200 cash
-		req:260 cash:earned
-		icon:https://placecats.com/300/200
-
-	*autodiggerach
-		name:Your hand crampt up
-		desc:Your hands feel really tight and tingly, so you build an autodigger out of twine and sticks
-		on earn:yield 1 autodigger
-		req:111 cash:earned
-		icon:https://placecats.com/300/200
 	
 	*autodiggerach1
 		name:Your hand crampt up again
 		desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
 		on earn:yield 1 autodigger
 		req:184 cash:earned
-		icon:https://placecats.com/300/200
+		icon:https://i.imgur.com/FDEif4M.png
 	*autodiggerach2
 		name:You scritch your belly
 		desc:You chuckle out loud, and make an autodigger
 		on earn:yield 1 autodigger
 		req:(burgershop>=1)
+		icon:https://i.imgur.com/FDEif4M.png
+
+
+//  Tutorial Cheevos
+
+// Find yourself enjoying getting your hands dirty
+	*getDirtyHands
+		req:60 cash:earned
+		name:You can feel the dirt on your hands
+		desc:Your hands feel really nice, and you start to feel happy
+		on earn:yield 25 cash
 		icon:https://placecats.com/300/200
+
+// Find My First cigarette
+
+*findADartCheev
+	req:10 cash:earned
+	name:You find a musty old cigarette
+	desc:It's a common one, so you are totally okay to trade this for a dollar to some guy. He takes one pull and gives it back to you! 
+	on earn:yield 100 cash
+	on earn:yield 1 darts
+	icon:https://i.imgur.com/V0czQ98.png
+
+// Find my first toonies
+*findAToonieCheev
+	req:600 cash:earned
+	name:You find a Toonie! Oh... It's not that special
+	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
+	on earn:yield 200 cash
+	icon:https://i.imgur.com/NdGwzWj.png
+
+// Your hand cramps up
+
+*yourHandCrampsCheev
+	name:Your hand crampt up
+	desc:Your hands feel really tight and tingly
+	req:77 cash:earned
+	icon:https://i.imgur.com/zJpRTs8.png
+
+*autodiggerach
+	name:Your hand crampt up
+	desc:Your hands feel really tight and tingly, so you build an autodigger out of twine and sticks
+	on earn:yield 1 autodigger
+	req:111 cash:earned
+	icon:https://i.imgur.com/FDEif4M.png
+
+
+
+
+
 
 	// *bacteriaach1
 	// 	name:First Bacteria

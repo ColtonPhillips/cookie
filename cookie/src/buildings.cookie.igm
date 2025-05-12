@@ -4,7 +4,7 @@ buildings = [[[
 		desc:Double meat and Double Cheese!
 		cost:500 cash
 		on click:cash is cash+1
-		icon:<$IPlaceKitten>
+		icon:<$IBurger>
 
 	*autodigger
 		name:autodigger

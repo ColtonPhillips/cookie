@@ -6,39 +6,69 @@ achievements = [[[
 		req:(burgershop>=5)
 		icon:<$IPlaceKitten>
 
-	*diggerach
-		name:You can feel the dirt on your hands
-		desc:Your hands feel really nice, and you start to feel happy
-		on earn:yield 42 cash
-		req:24 cash:earned
-		icon:<$IPlaceKitten>
 
-	*diggerach1
-		name:You find a Canadian Toonie
-		desc:It's a common one, so you are totally okay to spend this on boygers
-		on earn:yield 200 cash
-		req:260 cash:earned
-		icon:<$IPlaceKitten>
-
-	*autodiggerach
-		name:Your hand crampt up
-		desc:Your hands feel really tight and tingly, so you build an autodigger out of twine and sticks
-		on earn:yield 1 autodigger
-		req:111 cash:earned
-		icon:<$IPlaceKitten>
 	
 	*autodiggerach1
 		name:Your hand crampt up again
 		desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
 		on earn:yield 1 autodigger
 		req:184 cash:earned
-		icon:<$IPlaceKitten>
+		icon:<$IShovel>
 	*autodiggerach2
 		name:You scritch your belly
 		desc:You chuckle out loud, and make an autodigger
 		on earn:yield 1 autodigger
 		req:(burgershop>=1)
+		icon:<$IShovel>
+
+
+//  Tutorial Cheevos
+
+// Find yourself enjoying getting your hands dirty
+	*getDirtyHands
+		req:60 cash:earned
+		name:You can feel the dirt on your hands
+		desc:Your hands feel really nice, and you start to feel happy
+		on earn:yield 25 cash
 		icon:<$IPlaceKitten>
+
+// Find My First cigarette
+
+*findADartCheev
+	req:10 cash:earned
+	name:You find a musty old cigarette
+	desc:It's a common one, so you are totally okay to trade this for a dollar to some guy. He takes one pull and gives it back to you! 
+	on earn:yield 100 cash
+	on earn:yield 1 darts
+	icon:<$ICigarettes>
+
+// Find my first toonies
+*findAToonieCheev
+	req:600 cash:earned
+	name:You find a Toonie! Oh... It's not that special
+	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
+	on earn:yield 200 cash
+	icon:<$IToonies>
+
+// Your hand cramps up
+
+*yourHandCrampsCheev
+	name:Your hand crampt up
+	desc:Your hands feel really tight and tingly
+	req:77 cash:earned
+	icon:<$IHand>
+
+*autodiggerach
+	name:Your hand crampt up
+	desc:Your hands feel really tight and tingly, so you build an autodigger out of twine and sticks
+	on earn:yield 1 autodigger
+	req:111 cash:earned
+	icon:<$IShovel>
+
+
+
+
+
 
 	// *bacteriaach1
 	// 	name:First Bacteria

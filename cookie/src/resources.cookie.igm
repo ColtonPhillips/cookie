@@ -6,6 +6,22 @@ resources = [[[
 		class:noBackground
 		icon:<$ICoin>
 
+	*darts
+		name:DARTS
+		desc:A cigarette that you can smoke
+		// show earned
+		class:noBackground
+		// on load:yield 1 darts
+		icon:<$ICigarettes>
+
+	*toonies
+		name:TOONIES
+		desc:Toonies with some numismatic value
+		class:noBackground
+		icon:<$IToonies>
+		hidden when 0
+
+
 	*string
 		name:String
 		desc:A ressource produced by ant. Can be used to make bacterial colonies that produce more bacteria or sold for money.
