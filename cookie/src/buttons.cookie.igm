@@ -1,24 +1,35 @@
 buttons = [[[
 
-	*make.cash
-		name:Dig In The Dirt
-		desc:Dig in the dirt until you find something for <$author_name>
-		on click:yield 1 cash
-		on click:anim icon wobble
-		icon:<$IShovel>
-		class:bigButton
-		tag:MainButton
+*make.cash
+	name:Dig In The Dirt
+	desc:Dig in the dirt until you find something for <$author_name>
+	on click:yield 1 cash
+	on click:anim icon wobble
+	icon:<$IShovel>
+	class:bigButton hasFlares
+	tag:MainButton
 
-	*sell.string
-		name:Sell string
-		desc:Sell some string on the black market. (1 string = 0.1 money)
-		on click:if (string>1) yield 0.1 money
-		on click:if (string>1) yield -1 string
-		on tick:if (ant>=1) show this
-		on tick:if (ant<1) hide this
-		icon:<$IPlaceKitten>
-		tooltip origin:bottom
-		tag:SecButton
+// *sell.darts
+// 	name:Dell Darts
+// 	desc:Sell a dart to a passeryby
+// 	on click:yield -1 darts
+// 	on click:anim icon wobble
+// 	icon:<$ICigarettes>
+// 	class:bigButton
+// 	tag:SecButton
+// 	// hidden when 0
+*sell.darts
+	name:Sell darts
+	desc:Sell some darts on the black market. (1 darts = 100 cash)
+	on click:if (darts>=1) yield 100 cash
+	on click:if (darts>=1) yield -1 darts
+	on tick:if (darts>=1) show this
+	on tick:if (darts<1) hide this
+	icon:<$ICigarettes>
+	tooltip origin:bottom
+	class:hasFlares
+	tag:SecButton
+
 
 	*bought
 		tag:UpgrButtons

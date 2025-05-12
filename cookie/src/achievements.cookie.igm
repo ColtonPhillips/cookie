@@ -1,69 +1,89 @@
 achievements = [[[
-	// these are ordered, big guy
-	*fatguyach1
-		name:Simmer down, 5 burgers, you only saved one for meee?
-		desc:Eat 5 Burgers At Once
-		req:(burgershop>=5)
-		icon:<$IPlaceKitten>
+
 
 
 	
-	*autodiggerach1
-		name:Your hand crampt up again
-		desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
-		on earn:yield 1 autodigger
-		req:184 cash:earned
-		icon:<$IShovel>
-	*autodiggerach2
-		name:You scritch your belly
-		desc:You chuckle out loud, and make an autodigger
-		on earn:yield 1 autodigger
-		req:(burgershop>=1)
-		icon:<$IShovel>
+
+
 
 
 //  Tutorial Cheevos
 
 // Find yourself enjoying getting your hands dirty
-	*getDirtyHands
-		req:60 cash:earned
-		name:You can feel the dirt on your hands
-		desc:Your hands feel really nice, and you start to feel happy
-		on earn:yield 25 cash
-		icon:<$IPlaceKitten>
+*getDirtyHands
+	req:5 cash:earned
+	name:You can feel the dirt on your hands
+	desc:Your hands feel really nice, and you start to feel happy
+	on earn:yield 5 cash
+	icon:<$IPlaceKitten>
 
 // Find My First cigarette
 
 *findADartCheev
-	req:10 cash:earned
+	req:20 cash:earned
 	name:You find a musty old cigarette
 	desc:It's a common one, so you are totally okay to trade this for a dollar to some guy. He takes one pull and gives it back to you! 
-	on earn:yield 100 cash
+	on earn:yield 50 cash
 	on earn:yield 1 darts
 	icon:<$ICigarettes>
 
+// Your hand cramps up
+
+*yourHandCrampsCheev
+	name:Your hand cramps up something awful
+	desc:Your hands feel really tight and tingly, but you found a quarter!
+	on earn:yield 25 cash
+	req:80 cash:earned
+	icon:<$IHand>
+
 // Find my first toonies
+
 *findAToonieCheev
-	req:600 cash:earned
+	req:350 cash:earned
 	name:You find a Toonie! Oh... It's not that special
 	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
 	on earn:yield 200 cash
 	icon:<$IToonies>
 
-// Your hand cramps up
+// Find a Silver dollar
 
-*yourHandCrampsCheev
-	name:Your hand crampt up
-	desc:Your hands feel really tight and tingly
-	req:77 cash:earned
-	icon:<$IHand>
+*findASilverCoinCheev
+	req:160 cash:earned
+	name:You find a Silver Dollar!
+	desc: You have to keep it!!!
+	on earn:yield 1 silverdollars
+	icon:<$ISilverDollars>
 
-*autodiggerach
-	name:Your hand crampt up
-	desc:Your hands feel really tight and tingly, so you build an autodigger out of twine and sticks
+// Find A Nice Toonie!
+*find2TooniesCheev
+	req:620 cash:earned
+	name:You find a Toonie! And it's blessed as the day!!!
+	desc: This is the exact Toonie you were looking for to complete your set!
+	on earn:yield 1 toonies
+	icon:<$IToonies>
+
+// Your hand cramps up but you do something about it
+
+*findAutoDiggerCheev
+	name:Autodigger: Your hand crampt up again
+	desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
 	on earn:yield 1 autodigger
-	req:111 cash:earned
+	req:184 cash:earned
 	icon:<$IShovel>
+
+*find2AutoDiggerCheev
+	name:You scritch your belly
+	desc:You chuckle out loud, and make an autodigger out of belly fluff
+	on earn:yield 1 autodigger
+	req:(burgershop>=1)
+	icon:<$IShovel>
+
+// Ending the tutorial, you ate 5 burgers
+*ateFiveBurgersCheev
+	name:5 burgers?!?! You ate 5 burgers and there is only one left for me?
+	desc:Eat 5 Burgers At Once
+	req:(burgershop>=5)
+	icon:<$IBurger>
 
 
 

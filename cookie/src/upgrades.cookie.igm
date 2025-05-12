@@ -88,41 +88,41 @@ upgrades = [[[
 		req:(ant>=1e9) and antupgr3
 		icon:upgricons[4,2]
 
-	*sellingupgr1
-		name:Selling pitch
-		desc:You convince people that the string is really special and is worth more than it's actually worth. Double the selling price of string.
-		passive:multiply money yield of salesman by 2
-		passive:multiply money yield of sell.string by 2
-		cost:1 money
-		req:0.1 money:earned
-		icon:upgricons[1,3]
+	// *sellingupgr1
+	// 	name:Selling pitch
+	// 	desc:You convince people that the string is really special and is worth more than it's actually worth. Double the selling price of string.
+	// 	passive:multiply money yield of salesman by 2
+	// 	passive:multiply money yield of sell.string by 2
+	// 	cost:1 money
+	// 	req:0.1 money:earned
+	// 	icon:upgricons[1,3]
 
-	*sellingupgr2
-		name:Classified Ads
-		desc:You put ads for your string in the newspaper. Now everyone wants to buy some ! At least everyone who reads the newspaper. Multiply the selling price of string by 2.
-		passive:multiply money yield of sell.string by 2
-		passive:multiply money yield of salesman by 2
-		cost:10 money
-		req:2 money:earned and sellingupgr1
-		icon:upgricons[2,3]
+	// *sellingupgr2
+	// 	name:Classified Ads
+	// 	desc:You put ads for your string in the newspaper. Now everyone wants to buy some ! At least everyone who reads the newspaper. Multiply the selling price of string by 2.
+	// 	passive:multiply money yield of sell.string by 2
+	// 	passive:multiply money yield of salesman by 2
+	// 	cost:10 money
+	// 	req:2 money:earned and sellingupgr1
+	// 	icon:upgricons[2,3]
 
-	*sellingupgr3
-		name:Adblocker's worst ennemy
-		desc:From YouTube ads to mobile game ads, your string is advertised everywhere ! Multiply the selling price of string by 2.
-		passive:multiply money yield of sell.string by 2
-		passive:multiply money yield of salesman by 2
-		cost:50 money
-		req:20 money:earned and sellingupgr2
-		icon:upgricons[3,3]
+	// *sellingupgr3
+	// 	name:Adblocker's worst ennemy
+	// 	desc:From YouTube ads to mobile game ads, your string is advertised everywhere ! Multiply the selling price of string by 2.
+	// 	passive:multiply money yield of sell.string by 2
+	// 	passive:multiply money yield of salesman by 2
+	// 	cost:50 money
+	// 	req:20 money:earned and sellingupgr2
+	// 	icon:upgricons[3,3]
 
-	*sellingupgr4
-		name:Size matters
-		desc:Your string is advertised everywhere, from the superbowl ads to billboards. Now <b>everyone</b> wants to buy your string. Multiply the selling price of string by 3.
-		passive:multiply money yield of sell.string by 3
-		passive:multiply money yield of salesman by 3
-		cost:10e6 money
-		req:5e6 money:earned and sellingupgr3
-		icon:upgricons[4,3]
+	// *sellingupgr4
+	// 	name:Size matters
+	// 	desc:Your string is advertised everywhere, from the superbowl ads to billboards. Now <b>everyone</b> wants to buy your string. Multiply the selling price of string by 3.
+	// 	passive:multiply money yield of sell.string by 3
+	// 	passive:multiply money yield of salesman by 3
+	// 	cost:10e6 money
+	// 	req:5e6 money:earned and sellingupgr3
+	// 	icon:upgricons[4,3]
 
 	*salesmanupgr1
 		name:Minors and miners

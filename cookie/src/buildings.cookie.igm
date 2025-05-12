@@ -10,9 +10,10 @@ buildings = [[[
 		name:autodigger
 		desc:You're surprised this works, because it's made or random bits of fluff
 		cost:10e6 cash
-		on tick:yield 0.5 cash
+		on tick:yield 0.666 cash
 		icon:<$IPlaceKitten2>
 		req:1e6 cash:earned
+		hidden when 0
 
 	*ant
 		name:Ant

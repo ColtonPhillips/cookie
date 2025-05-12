@@ -10,7 +10,7 @@ Let's make a game!
 	desc: Welcome to my nightmare! #gamedev Join the discord! : http://www.example.com
 
 Settings
-	background:https://i.imgur.com/d6uHzC8.png
+	background:https://i.imgur.com/dddLouu.png
 	building cost increase:100%
 	building cost refund:1%
 	spritesheet:upgricons, 48 by 48, https://file.garden/Z8moUZIjfg3Igpm6/Plague%20Clicker/upgradesIcon
@@ -105,25 +105,36 @@ CSS
 
 Buttons
 
-	*make.cash
-		name:Dig In The Dirt
-		desc:Dig in the dirt until you find something for Colton Phillips
-		on click:yield 1 cash
-		on click:anim icon wobble
-		icon:https://i.imgur.com/FDEif4M.png
-		class:bigButton
-		tag:MainButton
+*make.cash
+	name:Dig In The Dirt
+	desc:Dig in the dirt until you find something for Colton Phillips
+	on click:yield 1 cash
+	on click:anim icon wobble
+	icon:https://i.imgur.com/FDEif4M.png
+	class:bigButton hasFlares
+	tag:MainButton
 
-	*sell.string
-		name:Sell string
-		desc:Sell some string on the black market. (1 string = 0.1 money)
-		on click:if (string>1) yield 0.1 money
-		on click:if (string>1) yield -1 string
-		on tick:if (ant>=1) show this
-		on tick:if (ant<1) hide this
-		icon:https://placecats.com/300/200
-		tooltip origin:bottom
-		tag:SecButton
+// *sell.darts
+// 	name:Dell Darts
+// 	desc:Sell a dart to a passeryby
+// 	on click:yield -1 darts
+// 	on click:anim icon wobble
+// 	icon:https://i.imgur.com/V0czQ98.png
+// 	class:bigButton
+// 	tag:SecButton
+// 	// hidden when 0
+*sell.darts
+	name:Sell darts
+	desc:Sell some darts on the black market. (1 darts = 100 cash)
+	on click:if (darts>=1) yield 100 cash
+	on click:if (darts>=1) yield -1 darts
+	on tick:if (darts>=1) show this
+	on tick:if (darts<1) hide this
+	icon:https://i.imgur.com/V0czQ98.png
+	tooltip origin:bottom
+	class:hasFlares
+	tag:SecButton
+
 
 	*bought
 		tag:UpgrButtons
@@ -162,6 +173,12 @@ Resources
 		icon:https://i.imgur.com/NdGwzWj.png
 		hidden when 0
 
+	*silverdollars
+		name:SILVER DOLLARS
+		desc:80% Silver, with some numismatic value
+		class:noBackground
+		icon:https://i.imgur.com/WdM1ry0.png
+		hidden when 0
 
 	*string
 		name:String
@@ -195,9 +212,10 @@ Buildings
 		name:autodigger
 		desc:You're surprised this works, because it's made or random bits of fluff
 		cost:10e6 cash
-		on tick:yield 0.5 cash
+		on tick:yield 0.666 cash
 		icon:https://placecats.com/300/300
 		req:1e6 cash:earned
+		hidden when 0
 
 	*ant
 		name:Ant
@@ -374,41 +392,41 @@ Upgrades
 		req:(ant>=1e9) and antupgr3
 		icon:upgricons[4,2]
 
-	*sellingupgr1
-		name:Selling pitch
-		desc:You convince people that the string is really special and is worth more than it's actually worth. Double the selling price of string.
-		passive:multiply money yield of salesman by 2
-		passive:multiply money yield of sell.string by 2
-		cost:1 money
-		req:0.1 money:earned
-		icon:upgricons[1,3]
+	// *sellingupgr1
+	// 	name:Selling pitch
+	// 	desc:You convince people that the string is really special and is worth more than it's actually worth. Double the selling price of string.
+	// 	passive:multiply money yield of salesman by 2
+	// 	passive:multiply money yield of sell.string by 2
+	// 	cost:1 money
+	// 	req:0.1 money:earned
+	// 	icon:upgricons[1,3]
 
-	*sellingupgr2
-		name:Classified Ads
-		desc:You put ads for your string in the newspaper. Now everyone wants to buy some ! At least everyone who reads the newspaper. Multiply the selling price of string by 2.
-		passive:multiply money yield of sell.string by 2
-		passive:multiply money yield of salesman by 2
-		cost:10 money
-		req:2 money:earned and sellingupgr1
-		icon:upgricons[2,3]
+	// *sellingupgr2
+	// 	name:Classified Ads
+	// 	desc:You put ads for your string in the newspaper. Now everyone wants to buy some ! At least everyone who reads the newspaper. Multiply the selling price of string by 2.
+	// 	passive:multiply money yield of sell.string by 2
+	// 	passive:multiply money yield of salesman by 2
+	// 	cost:10 money
+	// 	req:2 money:earned and sellingupgr1
+	// 	icon:upgricons[2,3]
 
-	*sellingupgr3
-		name:Adblocker's worst ennemy
-		desc:From YouTube ads to mobile game ads, your string is advertised everywhere ! Multiply the selling price of string by 2.
-		passive:multiply money yield of sell.string by 2
-		passive:multiply money yield of salesman by 2
-		cost:50 money
-		req:20 money:earned and sellingupgr2
-		icon:upgricons[3,3]
+	// *sellingupgr3
+	// 	name:Adblocker's worst ennemy
+	// 	desc:From YouTube ads to mobile game ads, your string is advertised everywhere ! Multiply the selling price of string by 2.
+	// 	passive:multiply money yield of sell.string by 2
+	// 	passive:multiply money yield of salesman by 2
+	// 	cost:50 money
+	// 	req:20 money:earned and sellingupgr2
+	// 	icon:upgricons[3,3]
 
-	*sellingupgr4
-		name:Size matters
-		desc:Your string is advertised everywhere, from the superbowl ads to billboards. Now <b>everyone</b> wants to buy your string. Multiply the selling price of string by 3.
-		passive:multiply money yield of sell.string by 3
-		passive:multiply money yield of salesman by 3
-		cost:10e6 money
-		req:5e6 money:earned and sellingupgr3
-		icon:upgricons[4,3]
+	// *sellingupgr4
+	// 	name:Size matters
+	// 	desc:Your string is advertised everywhere, from the superbowl ads to billboards. Now <b>everyone</b> wants to buy your string. Multiply the selling price of string by 3.
+	// 	passive:multiply money yield of sell.string by 3
+	// 	passive:multiply money yield of salesman by 3
+	// 	cost:10e6 money
+	// 	req:5e6 money:earned and sellingupgr3
+	// 	icon:upgricons[4,3]
 
 	*salesmanupgr1
 		name:Minors and miners
@@ -773,71 +791,91 @@ Upgrades
 		icon:upgricons[0,0]
 
 Achievements
-	// these are ordered, big guy
-	*fatguyach1
-		name:Simmer down, 5 burgers, you only saved one for meee?
-		desc:Eat 5 Burgers At Once
-		req:(burgershop>=5)
-		icon:https://placecats.com/300/200
+
 
 
 	
-	*autodiggerach1
-		name:Your hand crampt up again
-		desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
-		on earn:yield 1 autodigger
-		req:184 cash:earned
-		icon:https://i.imgur.com/FDEif4M.png
-	*autodiggerach2
-		name:You scritch your belly
-		desc:You chuckle out loud, and make an autodigger
-		on earn:yield 1 autodigger
-		req:(burgershop>=1)
-		icon:https://i.imgur.com/FDEif4M.png
+
+
 
 
 //  Tutorial Cheevos
 
 // Find yourself enjoying getting your hands dirty
-	*getDirtyHands
-		req:60 cash:earned
-		name:You can feel the dirt on your hands
-		desc:Your hands feel really nice, and you start to feel happy
-		on earn:yield 25 cash
-		icon:https://placecats.com/300/200
+*getDirtyHands
+	req:5 cash:earned
+	name:You can feel the dirt on your hands
+	desc:Your hands feel really nice, and you start to feel happy
+	on earn:yield 5 cash
+	icon:https://placecats.com/300/200
 
 // Find My First cigarette
 
 *findADartCheev
-	req:10 cash:earned
+	req:20 cash:earned
 	name:You find a musty old cigarette
 	desc:It's a common one, so you are totally okay to trade this for a dollar to some guy. He takes one pull and gives it back to you! 
-	on earn:yield 100 cash
+	on earn:yield 50 cash
 	on earn:yield 1 darts
 	icon:https://i.imgur.com/V0czQ98.png
 
+// Your hand cramps up
+
+*yourHandCrampsCheev
+	name:Your hand cramps up something awful
+	desc:Your hands feel really tight and tingly, but you found a quarter!
+	on earn:yield 25 cash
+	req:80 cash:earned
+	icon:https://i.imgur.com/zJpRTs8.png
+
 // Find my first toonies
+
 *findAToonieCheev
-	req:600 cash:earned
+	req:350 cash:earned
 	name:You find a Toonie! Oh... It's not that special
 	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
 	on earn:yield 200 cash
 	icon:https://i.imgur.com/NdGwzWj.png
 
-// Your hand cramps up
+// Find a Silver dollar
 
-*yourHandCrampsCheev
-	name:Your hand crampt up
-	desc:Your hands feel really tight and tingly
-	req:77 cash:earned
-	icon:https://i.imgur.com/zJpRTs8.png
+*findASilverCoinCheev
+	req:160 cash:earned
+	name:You find a Silver Dollar!
+	desc: You have to keep it!!!
+	on earn:yield 1 silverdollars
+	icon:https://i.imgur.com/WdM1ry0.png
 
-*autodiggerach
-	name:Your hand crampt up
-	desc:Your hands feel really tight and tingly, so you build an autodigger out of twine and sticks
+// Find A Nice Toonie!
+*find2TooniesCheev
+	req:620 cash:earned
+	name:You find a Toonie! And it's blessed as the day!!!
+	desc: This is the exact Toonie you were looking for to complete your set!
+	on earn:yield 1 toonies
+	icon:https://i.imgur.com/NdGwzWj.png
+
+// Your hand cramps up but you do something about it
+
+*findAutoDiggerCheev
+	name:Autodigger: Your hand crampt up again
+	desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
 	on earn:yield 1 autodigger
-	req:111 cash:earned
+	req:184 cash:earned
 	icon:https://i.imgur.com/FDEif4M.png
+
+*find2AutoDiggerCheev
+	name:You scritch your belly
+	desc:You chuckle out loud, and make an autodigger out of belly fluff
+	on earn:yield 1 autodigger
+	req:(burgershop>=1)
+	icon:https://i.imgur.com/FDEif4M.png
+
+// Ending the tutorial, you ate 5 burgers
+*ateFiveBurgersCheev
+	name:5 burgers?!?! You ate 5 burgers and there is only one left for me?
+	desc:Eat 5 Burgers At Once
+	req:(burgershop>=5)
+	icon:https://i.imgur.com/fBOcVQg.png
 
 
 

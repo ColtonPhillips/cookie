@@ -21,6 +21,12 @@ resources = [[[
 		icon:<$IToonies>
 		hidden when 0
 
+	*silverdollars
+		name:SILVER DOLLARS
+		desc:80% Silver, with some numismatic value
+		class:noBackground
+		icon:<$ISilverDollars>
+		hidden when 0
 
 	*string
 		name:String
