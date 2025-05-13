@@ -5,6 +5,7 @@ buildings = [[[
 		cost:500 cash
 		on click:cash is cash+1
 		icon:<$IBurger>
+		
 
 	*autodigger
 		name:autodigger

@@ -119,7 +119,7 @@ Buttons
 // 	desc:Sell a dart to a passeryby
 // 	on click:yield -1 darts
 // 	on click:anim icon wobble
-// 	icon:https://i.imgur.com/V0czQ98.png
+// 	icon:https://i.imgur.com/msFwJqa.png
 // 	class:bigButton
 // 	tag:SecButton
 // 	// hidden when 0
@@ -130,7 +130,7 @@ Buttons
 	on click:if (darts>=1) yield -1 darts
 	on tick:if (darts>=1) show this
 	on tick:if (darts<1) hide this
-	icon:https://i.imgur.com/V0czQ98.png
+	icon:https://i.imgur.com/msFwJqa.png
 	tooltip origin:bottom
 	class:hasFlares
 	tag:SecButton
@@ -156,7 +156,7 @@ Resources
 		desc:Cold Hard Cash (Canadian Pennies)
 		show earned
 		class:noBackground
-		icon:https://i.imgur.com/01F5NDL.png
+		icon:https://i.imgur.com/vHHOK6B.png
 
 	*darts
 		name:DARTS
@@ -164,20 +164,20 @@ Resources
 		// show earned
 		class:noBackground
 		// on load:yield 1 darts
-		icon:https://i.imgur.com/V0czQ98.png
+		icon:https://i.imgur.com/msFwJqa.png
 
 	*toonies
 		name:TOONIES
 		desc:Toonies with some numismatic value
 		class:noBackground
-		icon:https://i.imgur.com/NdGwzWj.png
+		icon:https://i.imgur.com/nvew77Y.png
 		hidden when 0
 
 	*silverdollars
 		name:SILVER DOLLARS
 		desc:80% Silver, with some numismatic value
 		class:noBackground
-		icon:https://i.imgur.com/WdM1ry0.png
+		icon:https://i.imgur.com/4ezG47a.png
 		hidden when 0
 
 	*string
@@ -206,14 +206,15 @@ Buildings
 		desc:Double meat and Double Cheese!
 		cost:500 cash
 		on click:cash is cash+1
-		icon:https://i.imgur.com/fBOcVQg.png
+		icon:https://i.imgur.com/bC8x6nW.png
+		
 
 	*autodigger
 		name:autodigger
 		desc:You're surprised this works, because it's made or random bits of fluff
 		cost:10e6 cash
 		on tick:yield 0.666 cash
-		icon:https://placecats.com/300/300
+		icon:https://placecats.com/48/48
 		req:1e6 cash:earned
 		hidden when 0
 
@@ -807,7 +808,7 @@ Achievements
 	name:You can feel the dirt on your hands
 	desc:Your hands feel really nice, and you start to feel happy
 	on earn:yield 5 cash
-	icon:https://placecats.com/300/200
+	icon:https://placecats.com/32/32
 
 // Find My First cigarette
 
@@ -817,7 +818,7 @@ Achievements
 	desc:It's a common one, so you are totally okay to trade this for a dollar to some guy. He takes one pull and gives it back to you! 
 	on earn:yield 50 cash
 	on earn:yield 1 darts
-	icon:https://i.imgur.com/V0czQ98.png
+	icon:https://i.imgur.com/msFwJqa.png
 
 // Your hand cramps up
 
@@ -835,7 +836,7 @@ Achievements
 	name:You find a Toonie! Oh... It's not that special
 	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
 	on earn:yield 200 cash
-	icon:https://i.imgur.com/NdGwzWj.png
+	icon:https://i.imgur.com/nvew77Y.png
 
 // Find a Silver dollar
 
@@ -844,7 +845,7 @@ Achievements
 	name:You find a Silver Dollar!
 	desc: You have to keep it!!!
 	on earn:yield 1 silverdollars
-	icon:https://i.imgur.com/WdM1ry0.png
+	icon:https://i.imgur.com/4ezG47a.png
 
 // Find A Nice Toonie!
 *find2TooniesCheev
@@ -852,7 +853,7 @@ Achievements
 	name:You find a Toonie! And it's blessed as the day!!!
 	desc: This is the exact Toonie you were looking for to complete your set!
 	on earn:yield 1 toonies
-	icon:https://i.imgur.com/NdGwzWj.png
+	icon:https://i.imgur.com/nvew77Y.png
 
 // Your hand cramps up but you do something about it
 
@@ -875,7 +876,7 @@ Achievements
 	name:5 burgers?!?! You ate 5 burgers and there is only one left for me?
 	desc:Eat 5 Burgers At Once
 	req:(burgershop>=5)
-	icon:https://i.imgur.com/fBOcVQg.png
+	icon:https://i.imgur.com/bC8x6nW.png
 
 
 
