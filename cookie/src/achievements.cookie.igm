@@ -64,7 +64,7 @@ achievements = [[[
 // Your hand cramps up but you do something about it
 
 *findAutoDiggerCheev
-	name:Autodigger: Your hand crampt up again
+	name:Autodigger: Your hand cramped up again
 	desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
 	on earn:yield 1 autodigger
 	req:184 cash:earned
