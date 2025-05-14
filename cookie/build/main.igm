@@ -223,7 +223,7 @@ Buildings
 	*autoroller
 		name:Autoroller
 		desc:Automatic Cigarette Rolling Device (& Tray)
-		cost: 1000 cash
+		cost:1000 cash
 		on tick:yield 0.0001 darts
 		req:1 silverdollars
 		// hidden when 0
@@ -815,7 +815,7 @@ Achievements
 
 // Find yourself enjoying getting your hands dirty
 *getDirtyHands
-	req:5 cash:earned
+	req:32 cash:earned
 	name:You can feel the dirt on your hands
 	desc:Your hands feel really nice, and you start to feel happy
 	on earn:yield 5 cash
@@ -824,10 +824,9 @@ Achievements
 // Find My First cigarette
 
 *findADartCheev
-	req:20 cash:earned
+	req:16 cash:earned
 	name:You find a musty old cigarette
 	desc:It's a common one, so you are totally okay to trade this for a dollar to some guy. He takes one pull and gives it back to you! 
-	on earn:yield 50 cash
 	on earn:yield 1 darts
 	icon:https://i.imgur.com/msFwJqa.png
 
