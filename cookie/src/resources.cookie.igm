@@ -11,11 +11,12 @@ resources = [[[
 		desc:A cigarette that you can smoke
 		// show earned
 		class:noBackground
-		// on load:yield 1 darts
+		on load:yield 1 darts
 		icon:<$ICigarettes>
+		hidden when 0
 
 	*toonies
-		name:TOONIES
+		name:TOONIES!
 		desc:Toonies with some numismatic value
 		class:noBackground
 		icon:<$IToonies>

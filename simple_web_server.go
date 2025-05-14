@@ -9,8 +9,26 @@ import (
 	"path/filepath"
 )
 
+func handleCORS(w http.ResponseWriter) {
+	// Set CORS headers to allow requests from any origin
+	w.Header().Set("Access-Control-Allow-Origin", "*") // Or use a specific origin instead of "*"
+	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, ngrok-skip-browser-warning") // Add custom headers here
+}
+
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		// Handle CORS preflight OPTIONS request
+		if r.Method == http.MethodOptions {
+			handleCORS(w)
+			w.WriteHeader(http.StatusOK)
+			return
+		}
+
+		// Apply CORS headers to all other requests
+		handleCORS(w)
+
+		// Serve the file requested
 		path := "." + r.URL.Path
 		f, err := os.Open(path)
 		if err != nil {

@@ -1,7 +1,7 @@
 buildings = [[[
 	*burgershop
-		name:A big 'ole Burger from <$author_name>
-		desc:Double meat and Double Cheese!
+		name:A big 'ole Double Meat Burger
+		desc:Double Meat and Double Cheese!
 		cost:500 cash
 		on click:cash is cash+1
 		icon:<$IBurger>
@@ -15,6 +15,15 @@ buildings = [[[
 		icon:<$IPlaceKitten2>
 		req:1e6 cash:earned
 		hidden when 0
+
+	*autoroller
+		name:Autoroller
+		desc:Automatic Cigarette Rolling Device (& Tray)
+		cost: 1000 cash
+		on tick:yield 0.0001 darts
+		req:1 silverdollars
+		// hidden when 0
+		icon:<$IAutoRoller>
 
 	*ant
 		name:Ant
