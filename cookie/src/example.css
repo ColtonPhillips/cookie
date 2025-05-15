@@ -28,10 +28,15 @@
 }
 #box-resource {
   position: fixed;
-  top: 5%;
+  top: 10%;
   left: 0px;
   width: 60%;
   height: 35px;
+}
+
+.tag-SecButton {
+  position: fixed;
+  top: 2%;
 }
 
 #box-buildings {
@@ -57,4 +62,12 @@
   width: 100%;
   min-height: 20%;
   background-color: hsla(180, 100%, 25%, 0.361);
+}
+
+#colton-resource {
+  border: solid 1px red;
+}
+
+.colton-resource {
+  border: solid 4px blue;
 }

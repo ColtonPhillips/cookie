@@ -3,7 +3,7 @@ resources = [[[
 		name:CASH
 		desc:Cold Hard Cash (Canadian Pennies)
 		show earned
-		class:noBackground
+		class:noBackground 
 		icon:<$ICoin>
 
 	*darts

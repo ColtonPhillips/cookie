@@ -1,0 +1,28 @@
+coincollectorAchievements = [[[
+// Find my first toonies
+
+*findAToonieCheev
+	req:350 cash:earned
+	name:You find a Toonie! Oh... It's not that special
+	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
+	on earn:yield 200 cash
+	icon:<$IToonies>
+
+// Find a Silver dollar
+
+*findASilverCoinCheev
+	req:160 cash:earned
+	name:You find a Silver Dollar!
+	desc: You have to keep it!!!
+	on earn:yield 1 silverdollars
+	icon:<$ISilverDollars>
+
+// Find A Nice Toonie!
+*find2TooniesCheev
+	req:620 cash:earned
+	name:You find a Toonie! And it's blessed as the day!!!
+	desc: This is the exact Toonie you were looking for to complete your set!
+	on earn:yield 1 toonies
+	icon:<$IToonies>
+    
+]]]

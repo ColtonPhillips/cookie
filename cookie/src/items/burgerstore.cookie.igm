@@ -1,0 +1,10 @@
+burgerstoreAchievements = [[[
+
+// Ending the tutorial, you ate 5 burgers
+*ateFiveBurgersCheev
+	name:5 burgers?!?! You ate 5 burgers and there is only one left for me?
+	desc:Eat 5 Burgers At Once
+	req:(burgershop>=5)
+	icon:<$IBurger>
+
+]]]

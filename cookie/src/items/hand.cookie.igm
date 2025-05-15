@@ -1,0 +1,30 @@
+handAchivements = [[[
+
+// Find yourself enjoying getting your hands dirty
+*getDirtyHands
+	req:32 cash:earned
+	name:You can feel the dirt on your hands
+	desc:Your hands feel really nice, and you start to feel happy
+	on earn:yield 5 cash
+	icon:<$IPlaceKitten>
+
+// Your hand cramps up
+
+*yourHandCrampsCheev
+	name:Your hand cramps up something awful
+	desc:Your hands feel really tight and tingly, but you found a quarter!
+	on earn:yield 25 cash
+	req:80 cash:earned
+	icon:<$IHand>
+
+
+// Your hand cramps up but you do something about it
+
+*handFinderCheev
+	name:Autodigger: Your hand cramped up again
+	desc:Your hands feel really REALLY tight! You make an autodigger out of random bits of fluff
+	on earn:yield 1 autodigger
+	req:184 cash:earned
+	icon:<$IShovel>
+
+]]]

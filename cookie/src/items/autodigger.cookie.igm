@@ -1,0 +1,8 @@
+autodiggerAchievements = [[[
+    *find2AutoDiggerCheev
+	name:You scritch your belly
+	desc:You chuckle out loud, and make an autodigger out of belly fluff
+	on earn:yield 1 autodigger
+	req:(burgershop>=1)
+	icon:<$IShovel>
+]]]

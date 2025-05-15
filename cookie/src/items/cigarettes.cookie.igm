@@ -1,0 +1,11 @@
+cigarettesAchievements = [[[
+
+// Find My First cigarette
+
+*findADartCheev
+	req:16 cash:earned
+	name:You find a musty old cigarette
+	desc:It's a common one, so you are totally okay to trade this for a dollar to some guy. He takes one pull and gives it back to you! 
+	on earn:yield 1 darts
+	icon:<$ICigarettes>
+]]]
