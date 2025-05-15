@@ -13,9 +13,11 @@ import (
 )
 
 var (
-	varPattern     = regexp.MustCompile(`^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\[(.*)\]$`) // Single-line variable pattern
-	multilineStart = regexp.MustCompile(`^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\[\[\[`)    // Multi-line start pattern
-	subPattern     = regexp.MustCompile(`<\$(\$\$\$)?([a-zA-Z0-9_.]+)>`)             // Variable substitution pattern
+	varPattern = regexp.MustCompile(`^\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\[(.*)\]\s*$`)
+	// varPattern = regexp.MustCompile(`^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\[(.*)\]\s*$`)
+	// varPattern     = regexp.MustCompile(`^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\[(.*)\]$`) // Single-line variable pattern
+	multilineStart = regexp.MustCompile(`^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\[\[\[`) // Multi-line start pattern
+	subPattern     = regexp.MustCompile(`<\$(\$\$\$)?([a-zA-Z0-9_.]+)>`)          // Variable substitution pattern
 )
 
 func main() {
@@ -28,6 +30,9 @@ func main() {
 	err = watcher.Add(".")
 	check(err)
 	err = watcher.Add("src")
+	check(err)
+
+	err = watcher.Add("src/items")
 	check(err)
 
 	// Run the precompiler immediately when the program starts
