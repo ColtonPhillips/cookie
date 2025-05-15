@@ -1,9 +1,9 @@
 coincollectorAchievements = [[[
-// Find my first toonies
 
+// Find my first toonies
 *findAToonieCheev
 	req:350 cash:earned
-	name:You find a Toonie! Oh... It's not that special
+	name:(+200 CASH) You find a Toonie! Oh... It's not that special
 	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
 	on earn:yield 200 cash
 	icon:<$IToonies>

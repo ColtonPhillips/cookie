@@ -1,7 +1,7 @@
 Let's make a game!
-	name:<$author_name>'s Game "<$game_name>"
+	name:<$author_name>'s <$game_name>
 	author:<$author_name>
-	desc: <$game_description> Join the discord! : <$discord_url>
+	desc:<$game_description> Join the discord! : <$discord_url>
 
 Settings
 <$settings>

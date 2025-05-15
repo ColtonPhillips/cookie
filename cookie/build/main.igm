@@ -5,9 +5,9 @@
 
 
 Let's make a game!
-	name:Colton Phillips's Game "Recyclicker"
+	name:Colton Phillips's Recyclicker
 	author:Colton Phillips
-	desc: Welcome to my nightmare! #gamedev Join the discord! : http://www.example.com
+	desc:Go to https://coltonphillips.itch.io/ now! Join the discord! : http://www.example.com
 
 Settings
 	background:https://i.imgur.com/d70hsOR.png
@@ -237,7 +237,7 @@ Buildings
 		name:Autoroller
 		desc:Automatic Cigarette Rolling Device (& Tray)
 		cost:1000 cash
-		on tick:yield 0.0001 darts
+		on tick:yield 0.034444 darts
 		req:1 silverdollars
 		// hidden when 0
 		icon:https://i.imgur.com/CcvpYNF.png
@@ -298,11 +298,11 @@ Achievements
 	on earn:yield 1 autodigger
 	req:(burgershop>=1)
 	icon:https://i.imgur.com/FDEif4M.png
-// Find my first toonies
 
+// Find my first toonies
 *findAToonieCheev
 	req:350 cash:earned
-	name:You find a Toonie! Oh... It's not that special
+	name:(+200 CASH) You find a Toonie! Oh... It's not that special
 	desc: You have way shinier toonies at your dad's house. This can be spent on gummy bears and the like.
 	on earn:yield 200 cash
 	icon:https://i.imgur.com/nvew77Y.png

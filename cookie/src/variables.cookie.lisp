@@ -1,7 +1,4 @@
 author_name = [Colton Phillips]
-game_name = [Recyclicker]
-game_description = [Welcome to my nightmare! #gamedev]
-master = [disaster]
+game_description = [Go to https://coltonphillips.itch.io/ now!]
 discord_url = [http://www.example.com]
-
-
+game_name = [Recyclicker]
